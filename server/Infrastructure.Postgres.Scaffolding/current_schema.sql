@@ -1,47 +1,55 @@
--- This schema is generated based on the current DBContext. Please check the class Seeder to see.
-CREATE TABLE "group" (
-    id text NOT NULL,
-    CONSTRAINT group_pkay PRIMARY KEY (id)
-);
 
-
-CREATE TABLE "user" (
-    id text NOT NULL,
+/*
+CREATE TABLE "user"
+(
+    userid   text NOT NULL,
     username text NOT NULL,
-    email text NOT NULL,
-    hash text NOT NULL,
-    salt text NOT NULL,
-    role text NOT NULL,
-    CONSTRAINT user_pkey PRIMARY KEY (id)
+    email    text NOT NULL,
+    hash     text NOT NULL,
+    salt     text NOT NULL,
+    roleid   text NOT NULL,
+    CONSTRAINT user_pk PRIMARY KEY (id),
+    CONSTRAINT user_role_fk FOREIGN KEY (roleid) REFERENCES "role" (roleid)
+);
+
+CREATE TABLE role
+(
+    roleid                 text,
+    name                   text NOT NULL,
+
+    canCreateFinding       bool NOT NULL DEFAULT FALSE,
+    canEditFinding         bool NOT NULL DEFAULT FALSE,
+    canViewFinding         bool NOT NULL DEFAULT FALSE,
+    canDeleteFinding       bool NOT NULL DEFAULT FALSE,
+
+    canCreateUser          bool NOT NULL DEFAULT FALSE,
+    canEditUser            bool NOT NULL DEFAULT FALSE,
+    canViewUser            bool NOT NULL DEFAULT FALSE,
+    canDeleteUser          bool NOT NULL DEFAULT FALSE,
+
+    canAssignUserToFinding bool NOT NULL DEFAULT FALSE,
+
+    CONSTRAINT role_pk PRIMARY KEY (roleid)
+);
+*/
+
+CREATE TYPE severity AS ENUM('Critical', 'High', 'Medium', 'Low');
+
+CREATE TYPE status AS ENUM('New', 'Triaged', 'In-Progress', 'Remediated', 'Accepted Risk');
+
+CREATE TABLE findings
+(
+    findingid     text     NOT NULL,
+    creatorid     text,
+    assignedid    text,
+    details       text     NOT NULL,
+    severity      severity NOT NULL,
+    discoverydate DATE NOT NULL,
+    status        status   NOT NULL,
+    CONSTRAINT findings_fk PRIMARY KEY (findingid),
 );
 
 
-CREATE TABLE findings (
-    groupid text NOT NULL,
-    userid text NOT NULL,
-    CONSTRAINT groupmember_pk PRIMARY KEY (groupid, userid),
-    CONSTRAINT groupmember_group_fk FOREIGN KEY (groupid) REFERENCES "group" (id),
-    CONSTRAINT groupmember_user_fk FOREIGN KEY (userid) REFERENCES "user" (id)
-);
 
-
-CREATE TABLE role (
-    messagetext text NOT NULL,
-    id text,
-    userid text NOT NULL,
-    groupid text NOT NULL,
-    timestamp timestamp with time zone NOT NULL,
-    CONSTRAINT message_group_id_fk FOREIGN KEY (groupid) REFERENCES "group" (id),
-    CONSTRAINT message_user_id_fk FOREIGN KEY (userid) REFERENCES "user" (id)
-);
-
-
-CREATE INDEX "IX_groupmember_userid" ON groupmember (userid);
-
-
-CREATE INDEX "IX_message_groupid" ON message (groupid);
-
-
-CREATE INDEX "IX_message_userid" ON message (userid);
 
 
