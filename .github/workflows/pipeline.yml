@@ -53,5 +53,5 @@ jobs:
           docker build \
             -t "${IMAGE}:${{ github.sha }}" \
             -f server/Startup/Dockerfile \
-            .
+            server
           docker push "${IMAGE}:${{ github.sha }}"
