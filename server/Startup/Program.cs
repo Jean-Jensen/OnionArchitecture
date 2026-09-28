@@ -4,7 +4,6 @@ using Infrastructure.PostGres;
 using Microsoft.Extensions.Options;
 using NSwag.Generation;
 using Startup.Documentation;
-using Startup.Proxy;
 
 namespace Startup;
 
@@ -27,7 +26,6 @@ public class Program
 
         services.AddDataSourceAndRepositories();
         services.RegisterRestApiServices();
-        services.AddSingleton<IProxyConfig, ProxyConfig>();
     }
 
     public static async Task ConfigureMiddleware(WebApplication app)
@@ -43,8 +41,6 @@ public class Program
 
         app.Urls.Clear();
         app.Urls.Add($"http://0.0.0.0:{appOptions.REST_PORT}");
-        app.Services.GetRequiredService<IProxyConfig>()
-            .StartProxyServer(appOptions.PORT, appOptions.REST_PORT, appOptions.WS_PORT);
 
         app.ConfigureRestApi();
 
