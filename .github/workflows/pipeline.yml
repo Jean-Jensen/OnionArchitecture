@@ -19,7 +19,7 @@ jobs:
          
         
       - name: Build
-        run: dotnet build /server/
+        run: dotnet build "server/OnionArchitecture.sln"
         
       - name: Run Tests
-        run: dotnet test /server/
+        run: dotnet test "server/OnionArchitecture.sln"
