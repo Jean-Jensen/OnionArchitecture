@@ -13,11 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Rest", "Api.Rest\Api.Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Startup", "Startup\Startup.csproj", "{EB72B218-8376-4A66-AB1D-2A68A25D45CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.WebSocket", "Api.WebSocket\Api.WebSocket.csproj", "{0129971C-EE41-438F-9310-D6BF9ACCFF72}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Postgres.Scaffolding", "Infrastructure.Postgres.Scaffolding\Infrastructure.Postgres.Scaffolding.csproj", "{CF785B5B-2D95-4951-88CB-7309E6BB11E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Websocket", "Infrastructure.Websocket\Infrastructure.Websocket.csproj", "{676F0C90-13DA-4452-B619-C705506903A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.UnitTests", "Domain.UnitTests\Domain.UnitTests.csproj", "{78DD0CF6-B208-4803-87B3-03D71497FD6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,17 +46,13 @@ Global
 		{EB72B218-8376-4A66-AB1D-2A68A25D45CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB72B218-8376-4A66-AB1D-2A68A25D45CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB72B218-8376-4A66-AB1D-2A68A25D45CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0129971C-EE41-438F-9310-D6BF9ACCFF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0129971C-EE41-438F-9310-D6BF9ACCFF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0129971C-EE41-438F-9310-D6BF9ACCFF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0129971C-EE41-438F-9310-D6BF9ACCFF72}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF785B5B-2D95-4951-88CB-7309E6BB11E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF785B5B-2D95-4951-88CB-7309E6BB11E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF785B5B-2D95-4951-88CB-7309E6BB11E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF785B5B-2D95-4951-88CB-7309E6BB11E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{676F0C90-13DA-4452-B619-C705506903A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{676F0C90-13DA-4452-B619-C705506903A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{676F0C90-13DA-4452-B619-C705506903A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{676F0C90-13DA-4452-B619-C705506903A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DD0CF6-B208-4803-87B3-03D71497FD6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DD0CF6-B208-4803-87B3-03D71497FD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DD0CF6-B208-4803-87B3-03D71497FD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DD0CF6-B208-4803-87B3-03D71497FD6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

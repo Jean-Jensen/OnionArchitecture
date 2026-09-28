@@ -1,8 +1,6 @@
 ﻿using Api.Rest;
-using Api.Websocket;
 using Application;
 using Infrastructure.PostGres;
-using Infrastructure.Websocket;
 using Microsoft.Extensions.Options;
 using NSwag.Generation;
 using Startup.Documentation;
@@ -28,15 +26,7 @@ public class Program
         services.RegisterApplicationServices();
 
         services.AddDataSourceAndRepositories();
-        services.AddWebsocketInfrastructure();
-
-        services.RegisterWebsocketApiServices();
         services.RegisterRestApiServices();
-        services.AddOpenApiDocument(conf =>
-        {
-            conf.DocumentProcessors.Add(new AddAllDerivedTypesProcessor());
-            conf.DocumentProcessors.Add(new AddStringConstantsProcessor());
-        });
         services.AddSingleton<IProxyConfig, ProxyConfig>();
     }
 
@@ -57,7 +47,6 @@ public class Program
             .StartProxyServer(appOptions.PORT, appOptions.REST_PORT, appOptions.WS_PORT);
 
         app.ConfigureRestApi();
-        await app.ConfigureWebsocketApi(appOptions.WS_PORT);
 
 
         app.MapGet("Acceptance", () => "Accepted");
