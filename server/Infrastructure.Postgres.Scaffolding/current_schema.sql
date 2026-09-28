@@ -7,6 +7,7 @@ CREATE TABLE "group" (
 
 CREATE TABLE "user" (
     id text NOT NULL,
+    username text NOT NULL,
     email text NOT NULL,
     hash text NOT NULL,
     salt text NOT NULL,
@@ -15,7 +16,7 @@ CREATE TABLE "user" (
 );
 
 
-CREATE TABLE groupmember (
+CREATE TABLE findings (
     groupid text NOT NULL,
     userid text NOT NULL,
     CONSTRAINT groupmember_pk PRIMARY KEY (groupid, userid),
@@ -24,7 +25,7 @@ CREATE TABLE groupmember (
 );
 
 
-CREATE TABLE message (
+CREATE TABLE role (
     messagetext text NOT NULL,
     id text,
     userid text NOT NULL,
