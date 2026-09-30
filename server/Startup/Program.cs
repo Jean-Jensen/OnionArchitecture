@@ -70,6 +70,7 @@ public class Program
 
         //fafnifsiojhgiosngoisjgroibjrdegb
         //ogivjsoiwjgivji0sjgb0sjbgi0ojksr0oigboi0esdhbj0oiedjhjboi0edhoi0pb
+        //iawjfuieawhgdsuishg9uirh9swghv9sewjdg9iohgvuios
         
         app.GenerateTypeScriptClient("/../../client/src/generated-client.ts").GetAwaiter().GetResult();
     }
