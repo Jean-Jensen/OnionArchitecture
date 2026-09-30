@@ -39,22 +39,6 @@
           "NSwag.CodeGeneration": "14.2.0"
         }
       },
-      "Docker.DotNet": {
-        "type": "Transitive",
-        "resolved": "3.125.15",
-        "contentHash": "XN8FKxVv8Mjmwu104/Hl9lM61pLY675s70gzwSj8KR5pwblo8HfWLcCuinh9kYsqujBkMH4HVRCEcRuU6al4BQ==",
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
-        }
-      },
-      "Docker.DotNet.X509": {
-        "type": "Transitive",
-        "resolved": "3.125.15",
-        "contentHash": "ONQN7ImrL3tHStUUCCPHwrFFQVpIpE+7L6jaDAMwSF+yTEmeWBmRARQZDRuvfj/+WtB8RR0oTW0tT3qQMSyHOw==",
-        "dependencies": {
-          "Docker.DotNet": "3.125.15"
-        }
-      },
       "Fluid.Core": {
         "type": "Transitive",
         "resolved": "2.12.0",
@@ -70,14 +54,6 @@
         "contentHash": "jOT1PA95jgf78CqWsKt8hz9Uzv4J39vukzf5nYtfky9N6wl1W4vIXT1CdkQI7zG20HnApEMtmpC/pMtCKr4rvw==",
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
-        }
-      },
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-        "type": "Transitive",
-        "resolved": "8.0.10",
-        "contentHash": "vMeY9F3Sq+AiZlquf84rwHOAQBS8nb8kd1RcuoXKPBhHNGBxMLYnr8/e/FCwu7kb14hH/rqWoEuyO4WXpAO6Rw==",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.10"
         }
       },
       "Microsoft.AspNetCore.OpenApi": {
@@ -258,35 +234,6 @@
         "resolved": "1.0.2",
         "contentHash": "MVF15eZfdTxA0yH43E4xDgByRPlyrLkXKq5/0FtQQvNwOJIljz2p4/phEdLnjWhhftu9isae1EGVydnY333AFw=="
       },
-      "PgCtxSetup": {
-        "type": "Transitive",
-        "resolved": "1.5.0",
-        "contentHash": "FZ17xA7lP0257ohhVXADmgraHBa3H2fdaNySB5hyTRisIqv16yAI5DCgAUP1+hYLxg4ognwlM/R8hFalKQMqeg==",
-        "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
-          "Microsoft.EntityFrameworkCore": "8.0.10",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10",
-          "Testcontainers.PostgreSql": "3.10.0"
-        }
-      },
-      "SharpZipLib": {
-        "type": "Transitive",
-        "resolved": "1.4.2",
-        "contentHash": "yjj+3zgz8zgXpiiC3ZdF/iyTBbz2fFvMxZFEBPUcwZjIvXOf37Ylm+K58hqMfIBt5JgU/Z2uoUS67JmTLe973A=="
-      },
-      "SSH.NET": {
-        "type": "Transitive",
-        "resolved": "2023.0.0",
-        "contentHash": "g+3VDUrYhm0sqSxmlQFgRFrmBxhQvVh4pfn4pqjkX7WXE3tTjt1tIsOtjuz3mz/5s8gFFQVRydwCJ7Ohs54sJA==",
-        "dependencies": {
-          "SshNet.Security.Cryptography": "[1.3.0]"
-        }
-      },
-      "SshNet.Security.Cryptography": {
-        "type": "Transitive",
-        "resolved": "1.3.0",
-        "contentHash": "5pBIXRjcSO/amY8WztpmNOhaaCNHY/B6CcYDI7FSTgqSyo/ZUojlLiKcsl+YGbxQuLX439qIkMfP0PHqxqJi/Q=="
-      },
       "Swashbuckle.AspNetCore": {
         "type": "Transitive",
         "resolved": "6.4.0",
@@ -318,25 +265,6 @@
         "type": "Transitive",
         "resolved": "6.4.0",
         "contentHash": "1Hh3atb3pi8c+v7n4/3N80Jj8RvLOXgWxzix6w3OZhB7zBGRwsy7FWr4e3hwgPweSBpwfElqj4V4nkjYabH9nQ=="
-      },
-      "Testcontainers": {
-        "type": "Transitive",
-        "resolved": "3.10.0",
-        "contentHash": "4oFyiUPCOM3s/sKDnIcOJZIn664d/8+fPvODDlfbb0QAfQqHlqjc2kIoFOLAt3oJRZP9/FJtTvcNvp9j7h4UBA==",
-        "dependencies": {
-          "Docker.DotNet": "3.125.15",
-          "Docker.DotNet.X509": "3.125.15",
-          "SSH.NET": "2023.0.0",
-          "SharpZipLib": "1.4.2"
-        }
-      },
-      "Testcontainers.PostgreSql": {
-        "type": "Transitive",
-        "resolved": "3.10.0",
-        "contentHash": "fPF8NaG8Dzd4nVnXiytyHZ6SfEowdcZBA99liJB0kSqYkM1OPIcwnJYxCCC+fuvdle+gXEVr2obq8k4fGS8w5w==",
-        "dependencies": {
-          "Testcontainers": "3.10.0"
-        }
       },
       "TimeZoneConverter": {
         "type": "Transitive",
@@ -372,8 +300,7 @@
         "dependencies": {
           "Application": "[1.0.0, )",
           "Infrastructure.Postgres.Scaffolding": "[1.0.0, )",
-          "Microsoft.EntityFrameworkCore": "[9.0.3, )",
-          "PgCtxSetup": "[1.5.0, )"
+          "Microsoft.EntityFrameworkCore": "[9.0.3, )"
         }
       },
       "infrastructure.postgres.scaffolding": {
