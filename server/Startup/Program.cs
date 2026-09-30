@@ -69,9 +69,6 @@ public class Program
         await File.WriteAllTextAsync("openapi.json", json);
 
         //fafnifsiojhgiosngoisjgroibjrdegb
-        //ogivjsoiwjgivji0sjgb0sjbgi0ojksr0oigboi0esdhbj0oiedjhjboi0edhoi0pb
-        //iawjfuieawhgdsuishg9uirh9swghv9sewjdg9iohgvuios
-        //paefkvoiesmjgoismjgboijdoibmjoisgbjoisedgjvoisgjvoismjgvosogvb
         
         app.GenerateTypeScriptClient("/../../client/src/generated-client.ts").GetAwaiter().GetResult();
     }
